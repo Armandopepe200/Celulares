@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white">
+                 <style>
+    body{
+        background-image: url(https://fondosmil.com/fondo/32052.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+ 
+<FONT FACE="arial">
+    <center>
+    <h1>MODIFICAR LA INFO DEl CELULAR</h1>       
+    </center>
+
+<form action="/updateCelular/{{celulares._id}}" method="POST">
+    <div>
+        <FONT COLOR="lime">
+        <label for="nombres">Modifica Clave</label>
+        <input type="text" name="clave" placeholder="clave" class="form-control bg-dark text-white"
+        value="{{celulares.clave}}">
+        </FONT>
+    </div>
+
+     <div>
+        <FONT COLOR="lime">
+        <label for="marca">Modifica la Marca:</label>
+        <input type="text" name="marca" placeholder="" class="form-control bg-dark text-white"
+        value="{{celulares.marca}}">
+        </FONT>
+    </div>
+
+     <div>
+        <FONT COLOR="lime">
+        <label for="precio">Modifica el Precio:</label>
+        <input type="text" name="precio" placeholder="" class="form-control bg-dark text-white"
+        value="{{celulares.precio}}">
+        </FONT>
+    </div>
+    
+     <div>
+        <FONT COLOR="lime">
+        <label for="fechaLan">Modifica la Fecha de Lanzamiento:</label>
+        <input type="date" name="fechaLan" placeholder="Fecha Lanzamiento" class="form-control bg-dark text-white"
+        value="{{celulares.fechaLan}}">
+        </FONT>
+    </div>
+
+      <div>
+        <FONT COLOR="lime">
+        <label for="RAM">Modifica la RAM</label>
+        <input type="text" name="RAM" placeholder="Cantidad de RAM" class="form-control bg-dark text-white"
+        value="{{celulares.RAM}}">
+        </FONT>
+    </div>
+
+    <div>
+        <FONT COLOR="lime">
+        <label for="almacenamiento">Modifica el Almacenamiento</label>
+        <input type="text" name="almacenamiento" placeholder="Cantidad de Almacenamiento" class="form-control bg-dark text-white"
+        value="{{celulares.almacenamiento}}">
+        </FONT>
+    </div>
+
+    <div>
+        <FONT COLOR="lime">
+        <label for="cantCamaras">Modifica la cantidad de Camaras</label>
+        <input type="text" name="cantCamaras" placeholder="Numero de Camaras" class="form-control bg-dark text-white"
+        value="{{celulares.cantCamaras}}">
+        </FONT>
+    </div>
+
+<center>
+    <button class="btn btn-info">Actualizar</button>
+</center>
+</form>

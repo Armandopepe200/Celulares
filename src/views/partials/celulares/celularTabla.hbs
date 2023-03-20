@@ -1,0 +1,54 @@
+{{#if celulares}}
+<table class="table table-bordered table-hover table-dark">
+    <FONT FACE="arial">
+    <FONT COLOR="cyan">
+    <h1>LISTA DE CELULARES REGISTRADOS</h1>  
+
+    <thead>
+        <tr class="text-center">
+            <th>id</th>
+            <th>CLAVE</th>
+            <th>MARCA</th>
+            <th>PRECIO</th>
+            <th>FECHA DE LANZAMIENTO</th>
+            <th>RAM</th>
+            <th>ALMACENAMIENTO</th>
+            <th>CANTIDAD DE CAMARAS</th>
+            <th>ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each celulares}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{clave}}</td>
+                <td>{{marca}}</td>
+                <td>{{precio}}</td>
+                <td>{{fechaLan}}</td>
+                <td>{{RAM}}</td>
+                <td>{{almacenamiento}}</td>
+                <td>{{cantCamaras}}</td>
+                <td>
+                {{#if opcion}}
+                    <a href="/statusCelular/{{_id}}" class="btn btn-warning">No Existente</a>
+                {{else}}
+                    <a href="/statusCelular/{{_id}}" class="btn btn-success">Existente</a>
+                {{/if}}
+                <a href="/updateCelular/{{_id}}" class="btn btn-info">Actualizar</a>
+                <a href="/deleteCelular/{{_id}}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+    <FONT FACE="arial">
+    <FONT COLOR="red">
+    <h1>NO EXISTE NINGUN CELULAR</h1>
+    <img src="/icons/iphone.png" class="w-75">
+</div>
+</div>
+{{/if}}
